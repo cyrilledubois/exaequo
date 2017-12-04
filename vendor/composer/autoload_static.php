@@ -23,6 +23,7 @@ class ComposerStaticInit5fad693ad787daa2ba92b6bb0748087d
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Debug\\' => 24,
             'Silex\\' => 6,
+            'SKoziel\\Silex\\PayPalRest\\' => 25,
         ),
         'P' => 
         array (
@@ -64,6 +65,10 @@ class ComposerStaticInit5fad693ad787daa2ba92b6bb0748087d
         array (
             0 => __DIR__ . '/..' . '/silex/silex/src/Silex',
         ),
+        'SKoziel\\Silex\\PayPalRest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/skoziel/silex-paypal/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -80,6 +85,10 @@ class ComposerStaticInit5fad693ad787daa2ba92b6bb0748087d
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
             ),
         ),
     );

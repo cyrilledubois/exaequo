@@ -1,0 +1,11 @@
+
+ {
+
+   "require": {
+
+       "silex/silex": "~2.0",
+        "components/jquery": "3.2.1"
+
+   }
+
+}

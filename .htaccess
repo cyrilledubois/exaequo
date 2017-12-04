@@ -1,0 +1,16 @@
+<IfModule mod_headers.c>
+<FilesMatch "\.(gif|jpg|png|ico)$">
+   Header set Cache-Control "max-age=864000"
+   RequestHeader unset Cookie
+   Header unset Set-Cookie
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+   Header set Cache-Control "max-age=864000"
+   RequestHeader unset Cookie
+   Header unset Set-Cookie
+</FilesMatch>
+</IfModule>
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]

@@ -145,7 +145,7 @@ class DAO implements DB {
         }
 
 
-        //créationde la requête sql insert
+        //création de la requête sql insert
         $sql = 'INSERT INTO ' . $this->tableName . ' (';
 
         foreach($data as $key=>$value){

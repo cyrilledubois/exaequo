@@ -40,6 +40,8 @@ class User implements UserInterface
 
     private $role;
 
+    private $image;
+
 
     public function getId() {
         return $this->id;
@@ -126,6 +128,15 @@ class User implements UserInterface
      */
     public function eraseCredentials() {
         // Nothing to do here
+    }
+
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $this->image = $image;
+        return $this;
     }
 
 }

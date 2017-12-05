@@ -18,10 +18,14 @@ class HomeController{
 
 	//page d'accueil qui affiche tout les articles
 	public function homePageAction(Application $app){
-		$articles = $app['dao.article']->getArticlesWithAuthor();
 
-	 	return $app['twig']->render('index.html.twig', array('articles' => $articles));
+	 	return $app['twig']->render('index.html.twig');
 	}
+
+    public function homePageCoursCollectifs(Application $app){
+
+        return $app['twig']->render('cours_collectifs.html.twig');
+    }
     
     //page de recherche par auteur
     public function rechercheAction(Application $app, Request $request){

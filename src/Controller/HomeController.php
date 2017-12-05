@@ -148,7 +148,7 @@ class HomeController{
     		'last_username' => $app['session']->get('_security.last_username')
     	));
     }
-
+    //Formulaire d'ajout d'un article
     public function ajoutArticleAction(Application $app, Request $request){
     	//on va vérifier que l'utilisateur est connecté
     	if(!$app['security.authorization_checker']->isGranted('IS_AUTHENTICATED_FULLY')){
@@ -191,7 +191,7 @@ class HomeController{
     }
     
     /**
-     * User sign in controller.
+     * User sign in controller (utilisée pour Exaequo)
      *
      * @param Application $app Silex application
      * @param Request $request the http request

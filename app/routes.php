@@ -20,19 +20,19 @@ $app->get('/article/delete', 'WF3\Controller\HomeController::deleteArticleAction
 $app->get('/users/list', 'WF3\Controller\HomeController::usersListAction')->bind('cours_pilates');
 
 //cours_yoga
-$app->get('/user', 'WF3\Controller\HomeController::userAction')
-->bind('cours_yoga');
+$app->get('/user', 'WF3\Controller\HomeController::userAction')->bind('cours_yoga');
 
 //equipe
 $app->match('/contact/moi', 'WF3\Controller\HomeController::contactAction')->bind('equipe');
 
 //tarifs
-$app->get('/seurche', 'WF3\Controller\HomeController::seurcheAction')
-    ->bind('tarifs');
+$app->get('/seurche', 'WF3\Controller\HomeController::seurcheAction')->bind('tarifs');
 
 //partenaires
-$app->match('/recherche', 'WF3\Controller\HomeController::rechercheAction')
-    ->bind('partenaires');
+$app->match('/recherche', 'WF3\Controller\HomeController::rechercheAction')->bind('partenaires');
 
 //contact
 $app->match('/ajout/article', 'WF3\Controller\HomeController::ajoutArticleAction')->bind('contact');
+
+//connexion
+$app->match('/connexion', 'WF3\Controller\HomeController::signInAction')->bind('connexion');

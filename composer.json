@@ -2,11 +2,10 @@
  {
 
    "require": {
-
-       "silex/silex": "~2.0",
-        "components/jquery": "3.2.1",
-       "skoziel/silex-paypal": "1.00",
-       "twig/twig": "~2.0"
+    "silex/silex": "~2.0",
+    "components/jquery": "3.2.1",
+    "skoziel/silex-paypal": "1.00",
+    "twig/twig": "~2.0"
 
    }
 

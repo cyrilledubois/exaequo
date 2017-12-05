@@ -11,28 +11,28 @@ $app->get('/', 'WF3\Controller\HomeController::homePageAction')->bind('index');
 $app->get('/cours_collectifs', 'WF3\Controller\HomeController::homePageCoursCollectifs')->bind('cours_collectifs');
 
 //fitness_cardio_physique
-$app->get('/article', 'WF3\Controller\HomeController::articleAction')->bind('fitness_cardio_physique');
+$app->get('/fitness_cardio_physique', 'WF3\Controller\HomeController::homePageFitnessCardioPhysique')->bind('fitness_cardio_physique');
 
 //cours_boxe
-$app->get('/article/delete', 'WF3\Controller\HomeController::deleteArticleAction')->bind('cours_boxe');
+$app->get('/cours_boxe', 'WF3\Controller\HomeController::homePageCoursBoxe')->bind('cours_boxe');
 
 //cours_pilates
-$app->get('/users/list', 'WF3\Controller\HomeController::usersListAction')->bind('cours_pilates');
+$app->get('/cours_pilates', 'WF3\Controller\HomeController::homePageCoursPilates')->bind('cours_pilates');
 
 //cours_yoga
-$app->get('/user', 'WF3\Controller\HomeController::userAction')
+$app->get('/cours_yoga', 'WF3\Controller\HomeController::homePageCoursYoga')
 ->bind('cours_yoga');
 
 //equipe
-$app->match('/contact/moi', 'WF3\Controller\HomeController::contactAction')->bind('equipe');
+$app->match('/equipe', 'WF3\Controller\HomeController::homePageEquipe')->bind('equipe');
 
 //tarifs
-$app->get('/seurche', 'WF3\Controller\HomeController::seurcheAction')
+$app->get('/tarifs', 'WF3\Controller\HomeController::homePageTarifs')
     ->bind('tarifs');
 
 //partenaires
-$app->match('/recherche', 'WF3\Controller\HomeController::rechercheAction')
+$app->match('/partenaires', 'WF3\Controller\HomeController::homePagePartenaires')
     ->bind('partenaires');
 
 //contact
-$app->match('/ajout/article', 'WF3\Controller\HomeController::ajoutArticleAction')->bind('contact');
+$app->match('/contact', 'WF3\Controller\HomeController::homePageContact')->bind('contact');

@@ -16,93 +16,68 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class HomeController{
 
-	//page d'accueil qui affiche tout les articles
+	//page d'accueil
 	public function homePageAction(Application $app){
 
 	 	return $app['twig']->render('index.html.twig');
 	}
 
+    //page des cours collectifs
     public function homePageCoursCollectifs(Application $app){
 
         return $app['twig']->render('cours_collectifs.html.twig');
     }
-    
-    //page de recherche par auteur
-    public function rechercheAction(Application $app, Request $request){
-        
-        $articles =[];
-        $rechercheForm = $app['form.factory']->create(SearchEngineType::class);
-        $rechercheForm->handleRequest($request);
-        if($rechercheForm->isSubmitted() AND $rechercheForm->isValid()){
-            //le formulaire a été envoyé
-            //$request->request est égal à $_POST
-            //$request->query est égal à $_GET
-            $post = $request->request->get('search_engine');
-            $articles = $app['dao.article']->getAllArticlesFromUsernameLike($post['auteur']);
-        }
-        return $app['twig']->render('recherche.html.twig', array(
-            'form'=>$rechercheForm->createView(),
-            'articles'=>$articles
-        ));
+
+    //page Fitness Cardio Physique
+    public function homePageFitnessCardioPhysique(Application $app){
+
+        return $app['twig']->render('fitness_cardio_physique.html.twig');
     }
 
-	//page qui affiche les 5 derniers articles
-	public function lastFiveArticlesAction(Application $app){
-		$articles = $app['dao.article']->getLastArticles();
+     //page Boxe
+    public function homePageCoursBoxe(Application $app){
 
-	 	return $app['twig']->render('last_articles.html.twig', array('articles' => $articles));
-	}
+        return $app['twig']->render('cours_boxe.html.twig');
+    }
 
-	//page d'affichage d'un article
-	public function articleAction(Application $app, $id){
-		$article = $app['dao.article']->find($id);
-    	return $app['twig']->render('article.html.twig', array('article' => $article));
-	}
+     //page Pilates
+    public function homePageCoursPilates(Application $app){
 
-	//page de suppression d'article
-	public function deleteArticleAction(Application $app, $id){
-        //on va vérifier que l'utilisateur est connecté
-        if(!$app['security.authorization_checker']->isGranted('IS_AUTHENTICATED_FULLY')){
-            //je peux rediriger l'utilisateur non authentifié
-            //return $app->redirect($app['url_generator']->generate('home'));
-            throw new AccessDeniedHttpException();
-        }
-        //on récupère l'utilisateur connecté qui veut faire la suppression
-        //on récupère le token si l'utilisateur est connecté
-        $token = $app['security.token_storage']->getToken();
-        if(NULL !== $token){
-            $user = $token->getUser();
-        }
-        //on va chercher les infos sur cet article
-        $article = $app['dao.article']->find($id);
-        //on vérifie que cet utlisateur est bien l'auteur de l'article
-        if($user->getId() != $article->getAuthor()){
-            //si l'utilisateur n'est pas l'auteur: accès interdit
-            throw new AccessDeniedHttpException();
-        }
-		$article = $app['dao.article']->delete($id);
-        //on crée un message de réussite dans la session
-        $app['session']->getFlashBag()->add('success', 'Article bien supprimé');
-        //on redirige vers la page d'accueil
-        return $app->redirect($app['url_generator']->generate('home'));
-	}
+        return $app['twig']->render('cours_pilates.html.twig');
+    }
 
-	//liste des utilisateurs
-	public function usersListAction(Application $app){
-		$users = $app['dao.user']->findAll();
-    	return $app['twig']->render('users.list.html.twig'
-                                , array('users' => $users));
-	}
+     //page Yoga
+    public function homePageCoursYoga(Application $app){
 
-	//fiche d'un utilisateur
-	public function userAction(Application $app, $id){
-		$user = $app['dao.user']->find($id);
-	    //on va chercher la liste des articles écrits par l'utilisateur dont l'id est $id
-	    //on utilise la méthode getArticlesFromUser() de la classe ArticleDAO
-	    $articles = $app['dao.article']->getArticlesFromUser($id);
-	    return $app['twig']->render('user.html.twig', array('user' => $user, 'articles' => $articles));
-	}
+        return $app['twig']->render('cours_yoga.html.twig');
+    }
 
+     //page Notre Equipe
+    public function homePageEquipe(Application $app){
+
+        return $app['twig']->render('equipe.html.twig');
+    }
+
+     //page Nos Tarifs
+    public function homePageTarifs(Application $app){
+
+        return $app['twig']->render('tarifs.html.twig');
+    }
+
+     //page Nos Partenaires
+    public function homePagePartenaires(Application $app){
+
+        return $app['twig']->render('partenaires.html.twig');
+    }
+
+     //page Contact
+    public function homePageContact(Application $app){
+
+        return $app['twig']->render('contact.html.twig');
+    }
+    
+    
+    
 	//page contact
 	public function contactAction(Application $app, Request $request){
         $contactForm = $app['form.factory']->create(ContactType::class);
@@ -133,13 +108,7 @@ class HomeController{
         ));
 	}
     
-    //page résultats recherche
-    public function seurcheAction(Application $app, Request $request){
-        $articles = $app['dao.article']->findArticlesByTitle($request->query->get('title'));
-        //$articles = $app['dao.article']->findArticlesByTitle($_GET['title']);
-        return $app['twig']->render('results.search.html.twig', array('articles' => $articles));
-    }
-    
+   
     public function loginAction(Application $app, Request $request){
     	//j'appelle la vue qui contient le formulaire de connexion
     	//error va contenir les éventuels messages d'erreur

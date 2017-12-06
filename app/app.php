@@ -74,7 +74,7 @@ $app['swiftmailer.options'] = array(
 );
 
 
-$app['dao.article'] = function($app){
+$app['dao.planing'] = function($app){
 	$articleDAO = new WF3\DAO\ArticleDAO($app['db'], 'articles', 'WF3\Domain\Article');
     //on injecte dans $articleDAO une instance de la classe UserDAO : injection de dépendance
     //elle est faite une seule fois, ici

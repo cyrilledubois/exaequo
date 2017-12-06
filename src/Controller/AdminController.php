@@ -11,19 +11,19 @@ use WF3\Domain\User;
 class AdminController{
 
     //page d'accueil du back office
-    public function indexAction(Application $app){
-        $articles = $app['dao.article']->findAll();
+    public function planningAction(Application $app){
+        $planning = $app['dao.planning']->findAll();
         $users = $app['dao.user']->findAll();
-        return $app['twig']->render('admin/index.admin.html.twig', array(
-                                        'articles'=>$articles,
+        return $app['twig']->render('admin/planning.admin.html.twig', array(
+                                        'planning'=>$planning,
                                         'users' =>$users
                                     ));
     }
 
     //suppression d'article
     //page de suppression d'article
-    public function deleteArticleAction(Application $app, $id){
-        $article = $app['dao.article']->delete($id);
+    public function deletePlanning(Application $app, $id){
+        $article = $app['dao.planning']->delete($id);
         //on crée un message de réussite dans la session
         $app['session']->getFlashBag()->add('success', 'Article bien supprimé');
         //on redirige vers la page d'accueil

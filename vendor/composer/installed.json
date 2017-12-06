@@ -1,5 +1,283 @@
 [
     {
+<<<<<<< HEAD
+=======
+        "name": "components/jquery",
+        "version": "3.2.1",
+        "version_normalized": "3.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/components/jquery.git",
+            "reference": "e5534d4ab8e80c159553d507e358ed20a806d3bf"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/components/jquery/zipball/e5534d4ab8e80c159553d507e358ed20a806d3bf",
+            "reference": "e5534d4ab8e80c159553d507e358ed20a806d3bf",
+            "shasum": ""
+        },
+        "time": "2017-03-21T07:01:49+00:00",
+        "type": "component",
+        "extra": {
+            "component": {
+                "scripts": [
+                    "jquery.js"
+                ],
+                "files": [
+                    "jquery.min.js",
+                    "jquery.min.map",
+                    "jquery.slim.js",
+                    "jquery.slim.min.js",
+                    "jquery.slim.min.map"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "JS Foundation and other contributors"
+            }
+        ],
+        "description": "jQuery JavaScript Library",
+        "homepage": "http://jquery.com"
+    },
+    {
+        "name": "psr/log",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-10-10T12:19:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
+        "name": "paypal/rest-api-sdk-php",
+        "version": "1.13.0",
+        "version_normalized": "1.13.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/paypal/PayPal-PHP-SDK.git",
+            "reference": "192e217beed14c8e75624e821fdc8ec51e2a21f5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/paypal/PayPal-PHP-SDK/zipball/192e217beed14c8e75624e821fdc8ec51e2a21f5",
+            "reference": "192e217beed14c8e75624e821fdc8ec51e2a21f5",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*",
+            "php": ">=5.3.0",
+            "psr/log": "^1.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35"
+        },
+        "time": "2017-11-13T19:21:59+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "PayPal": "lib/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "PayPal",
+                "homepage": "https://github.com/paypal/rest-api-sdk-php/contributors"
+            }
+        ],
+        "description": "PayPal's PHP SDK for REST APIs",
+        "homepage": "http://paypal.github.io/PayPal-PHP-SDK/",
+        "keywords": [
+            "payments",
+            "paypal",
+            "rest",
+            "sdk"
+        ]
+    },
+    {
+        "name": "skoziel/silex-paypal",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/sebastiankoziel/silex-paypal.git",
+            "reference": "f1fda3adc9cdbef70e4f4b54211682cf5fa8b123"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/sebastiankoziel/silex-paypal/zipball/f1fda3adc9cdbef70e4f4b54211682cf5fa8b123",
+            "reference": "f1fda3adc9cdbef70e4f4b54211682cf5fa8b123",
+            "shasum": ""
+        },
+        "require": {
+            "paypal/rest-api-sdk-php": ">=1.7",
+            "php": ">=5.6"
+        },
+        "require-dev": {
+            "silex/silex": ">=2.0"
+        },
+        "time": "2016-10-08T11:49:42+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "SKoziel\\Silex\\PayPalRest\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Sebastian Koziel",
+                "email": "contact@sebastiankoziel.pl"
+            }
+        ],
+        "description": "Pay Pal Rest Service Provider for Silex 2.0",
+        "keywords": [
+            "paypal",
+            "silex"
+        ]
+    },
+    {
+        "name": "symfony/routing",
+        "version": "v3.4.0",
+        "version_normalized": "3.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/routing.git",
+            "reference": "d768aa5b25d98188bae3fe4ce3eb2924c97aafac"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/routing/zipball/d768aa5b25d98188bae3fe4ce3eb2924c97aafac",
+            "reference": "d768aa5b25d98188bae3fe4ce3eb2924c97aafac",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5.9|>=7.0.8"
+        },
+        "conflict": {
+            "symfony/config": "<2.8",
+            "symfony/dependency-injection": "<3.3",
+            "symfony/yaml": "<3.4"
+        },
+        "require-dev": {
+            "doctrine/annotations": "~1.0",
+            "doctrine/common": "~2.2",
+            "psr/log": "~1.0",
+            "symfony/config": "~2.8|~3.0|~4.0",
+            "symfony/dependency-injection": "~3.3|~4.0",
+            "symfony/expression-language": "~2.8|~3.0|~4.0",
+            "symfony/http-foundation": "~2.8|~3.0|~4.0",
+            "symfony/yaml": "~3.4|~4.0"
+        },
+        "suggest": {
+            "doctrine/annotations": "For using the annotation loader",
+            "symfony/config": "For using the all-in-one router or any loader",
+            "symfony/dependency-injection": "For loading routes from a service",
+            "symfony/expression-language": "For using expression matching",
+            "symfony/http-foundation": "For using a Symfony Request object",
+            "symfony/yaml": "For using the YAML loader"
+        },
+        "time": "2017-11-24T14:13:49+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Routing\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Routing Component",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "router",
+            "routing",
+            "uri",
+            "url"
+        ]
+    },
+    {
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
         "name": "symfony/polyfill-mbstring",
         "version": "v1.6.0",
         "version_normalized": "1.6.0.0",
@@ -272,6 +550,7 @@
         ]
     },
     {
+<<<<<<< HEAD
         "name": "pimple/pimple",
         "version": "v3.2.2",
         "version_normalized": "3.2.2.0",
@@ -327,6 +606,11 @@
         "name": "silex/silex",
         "version": "v2.2.0",
         "version_normalized": "2.2.0.0",
+=======
+        "name": "symfony/debug",
+        "version": "v4.0.0",
+        "version_normalized": "4.0.0.0",
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
         "source": {
             "type": "git",
             "url": "https://github.com/silexphp/Silex.git",
@@ -2604,6 +2888,7 @@
         ]
     },
     {
+<<<<<<< HEAD
         "name": "symfony/translation",
         "version": "v3.0.9",
         "version_normalized": "3.0.9.0",
@@ -2641,10 +2926,41 @@
         "extra": {
             "branch-alias": {
                 "dev-master": "3.0-dev"
+=======
+        "name": "twig/twig",
+        "version": "v2.4.4",
+        "version_normalized": "2.4.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+            "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0",
+            "symfony/polyfill-mbstring": "~1.0"
+        },
+        "require-dev": {
+            "psr/container": "^1.0",
+            "symfony/debug": "~2.7",
+            "symfony/phpunit-bridge": "~3.3@dev"
+        },
+        "time": "2017-09-27T18:10:31+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4-dev"
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
             }
         },
         "installation-source": "dist",
         "autoload": {
+<<<<<<< HEAD
             "psr-4": {
                 "Symfony\\Component\\Translation\\": ""
             },
@@ -2655,10 +2971,23 @@
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
+=======
+            "psr-0": {
+                "Twig_": "lib/"
+            },
+            "psr-4": {
+                "Twig\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
         ],
         "authors": [
             {
                 "name": "Fabien Potencier",
+<<<<<<< HEAD
                 "email": "fabien@symfony.com"
             },
             {
@@ -2727,24 +3056,85 @@
         "extra": {
             "branch-alias": {
                 "dev-master": "3.4-dev"
+=======
+                "email": "fabien@symfony.com",
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com",
+                "role": "Project Founder"
+            },
+            {
+                "name": "Twig Team",
+                "homepage": "http://twig.sensiolabs.org/contributors",
+                "role": "Contributors"
+            }
+        ],
+        "description": "Twig, the flexible, fast, and secure template language for PHP",
+        "homepage": "http://twig.sensiolabs.org",
+        "keywords": [
+            "templating"
+        ]
+    },
+    {
+        "name": "twig/twig",
+        "version": "v2.4.4",
+        "version_normalized": "2.4.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twigphp/Twig.git",
+            "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/eddb97148ad779f27e670e1e3f19fb323aedafeb",
+            "reference": "eddb97148ad779f27e670e1e3f19fb323aedafeb",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0",
+            "symfony/polyfill-mbstring": "~1.0"
+        },
+        "require-dev": {
+            "psr/container": "^1.0",
+            "symfony/debug": "~2.7",
+            "symfony/phpunit-bridge": "~3.3@dev"
+        },
+        "time": "2017-09-27T18:10:31+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4-dev"
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
             }
         },
         "installation-source": "dist",
         "autoload": {
+            "psr-0": {
+                "Twig_": "lib/"
+            },
             "psr-4": {
+<<<<<<< HEAD
                 "Symfony\\Component\\Validator\\": ""
             },
             "exclude-from-classmap": [
                 "/Tests/"
             ]
+=======
+                "Twig\\": "src/"
+            }
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "BSD-3-Clause"
         ],
         "authors": [
             {
                 "name": "Fabien Potencier",
+<<<<<<< HEAD
                 "email": "fabien@symfony.com"
             },
             {
@@ -2754,5 +3144,27 @@
         ],
         "description": "Symfony Validator Component",
         "homepage": "https://symfony.com"
+=======
+                "email": "fabien@symfony.com",
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com",
+                "role": "Project Founder"
+            },
+            {
+                "name": "Twig Team",
+                "homepage": "http://twig.sensiolabs.org/contributors",
+                "role": "Contributors"
+            }
+        ],
+        "description": "Twig, the flexible, fast, and secure template language for PHP",
+        "homepage": "http://twig.sensiolabs.org",
+        "keywords": [
+            "templating"
+        ]
+>>>>>>> 29e74803f03350783a0c33ff77780e4339a9cd8a
     }
 ]
